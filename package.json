@@ -1,0 +1,16 @@
+{
+  "name": "user-upgrade-tool",
+  "version": "1.0.0",
+  "description": "A tool to upgrade user tiers",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5",
+    "node-fetch": "^3.2.10"
+  }
+}

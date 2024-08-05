@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Upgrade Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      #email::placeholder {
+        color: #999;
+        font-style: italic;
+      }
+      #email,
+      #tier {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <img src="assets/kalaam-logo.avif" alt="Kalaam Logo" class="logo" />
+      </div>
+      <h1>Upgrade user tier</h1>
+      <form id="upgradeForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            required
+            autocomplete="off"
+            placeholder="Enter user's email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="tier">Tier:</label>
+          <select id="tier" required>
+            <option value="">Select a tier</option>
+            <option value="Black Diamond">Black Diamond</option>
+            <option value="Gold">Gold</option>
+            <option value="Platinum">Platinum</option>
+            <option value="Silver">Silver</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Nickel">Nickel</option>
+          </select>
+        </div>
+        <button type="submit">Upgrade User</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <div id="overlay" class="hidden">
+      <div class="loader"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
